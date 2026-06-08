@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "executive-mba-brochure",
+      "urls": [
+        "https://iem-brochures.ie.edu/.executive.mba/"
+      ],
+      "description": "IE Executive MBA brochure landing page with program information and application details",
+      "blocks": [
+        {
+          "name": "hero-cover",
+          "instances": [
+            ".webpub-viewer__epub-container-spread-2 figure.spread-page-1"
+          ]
+        },
+        {
+          "name": "table-specs",
+          "instances": [
+            ".webpub-viewer__epub-container-spread-1 figure.spread-page-2",
+            ".webpub-viewer__epub-container-spread-1 figure.spread-page-3"
+          ]
+        },
+        {
+          "name": "columns-textimg",
+          "instances": [
+            ".webpub-viewer__epub-container-spread-0 figure.spread-page-4",
+            ".webpub-viewer__epub-container-spread-0 figure.spread-page-5"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1-cover",
+          "name": "Cover / Hero",
+          "selector": ".webpub-viewer__epub-container-spread-2",
+          "style": "dark",
+          "blocks": [
+            "hero-cover"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2-el-programa",
+          "name": "El Programa - Overview",
+          "selector": ".webpub-viewer__epub-container-spread-1",
+          "style": "dark",
+          "blocks": [
+            "table-specs"
+          ],
+          "defaultContent": [
+            ".webpub-viewer__epub-container-spread-1 figure.spread-page-2 div[id^='_idContainer']"
+          ]
+        },
+        {
+          "id": "section-3-introduction",
+          "name": "El Programa - Introduction Text",
+          "selector": ".webpub-viewer__epub-container-spread-0",
+          "style": null,
+          "blocks": [
+            "columns-textimg"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

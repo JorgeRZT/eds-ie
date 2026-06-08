@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://iem-brochures.ie.edu/.executive.mba/",
+  "path": "executive.mba",
+  "timestamp": "2026-06-05T14:20:38.127Z",
+  "title": "IE University Executive MBA",
+  "template": "executive-mba-brochure",
+  "blocks": [
+    "hero-cover",
+    "table-specs",
+    "table-specs",
+    "columns-textimg",
+    "columns-textimg"
+  ]
+}

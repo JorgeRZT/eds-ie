@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-textimg",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-06-05T14:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://iem-brochures.ie.edu/.executive.mba/",
+    "originPage": "Executive MBA brochure introduction section",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "text-image-split",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "paragraph text + portrait image (2 columns)",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "text-heavy sections with accompanying photo",
+      "split layout pages with description on one side and image on other",
+      "program introductions with portrait photography"
+    ],
+    "notSuitableFor": [
+      "multi-column text layouts without images",
+      "image galleries or multiple images side by side",
+      "columns with CTAs or buttons"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/executive-mba/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-05T14:06:00.000Z"
+  }
+}

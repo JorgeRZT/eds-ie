@@ -1,0 +1,119 @@
+/* Table Specs Block
+ * Displays program specifications as key-value pairs
+ * Designed for dark sections with white text
+ * Source: IE University Executive MBA brochure
+ */
+
+.table-specs.block {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.table-specs.block table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  color: inherit;
+  border: none;
+}
+
+@media (width >= 900px) {
+  .table-specs.block table {
+    font-size: var(--body-font-size-m);
+  }
+}
+
+/* Header row - "El programa" heading style */
+.table-specs.block table thead tr {
+  border: none;
+}
+
+.table-specs.block table th {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  text-align: left;
+  padding: 0 0 24px;
+  border: none;
+  color: inherit;
+}
+
+@media (width >= 900px) {
+  .table-specs.block table th {
+    font-size: var(--heading-font-size-xxl);
+    padding: 0 0 32px;
+  }
+}
+
+/* Body rows - key-value pairs separated by border */
+.table-specs.block table tbody tr {
+  border-bottom: 1px solid rgb(255 255 255 / 30%);
+}
+
+.table-specs.block table tbody tr:first-child {
+  border-top: 1px solid rgb(255 255 255 / 30%);
+}
+
+.table-specs.block table td {
+  padding: 14px 0;
+  text-align: left;
+  vertical-align: middle;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Two-column layout: label left, value right */
+.table-specs.block table td:first-child {
+  padding-right: 16px;
+}
+
+.table-specs.block table td:last-child:not(:first-child) {
+  text-align: right;
+}
+
+/* Reset margins on paragraphs within cells */
+.table-specs.block table th p,
+.table-specs.block table td p {
+  margin: 0;
+}
+
+.table-specs.block table td p + p {
+  margin-top: 0.25em;
+}
+
+/* no header variant */
+.table-specs.block.no-header table thead {
+  display: none;
+}
+
+.table-specs.block.no-header table tbody tr:first-child {
+  border-top: 1px solid rgb(255 255 255 / 30%);
+}
+
+/* striped variant */
+.table-specs.block.striped table tbody tr:nth-child(odd) {
+  background-color: rgb(255 255 255 / 5%);
+}
+
+/* Hide empty rows and headers */
+/* stylelint-disable no-descending-specificity */
+.table-specs.block table thead tr:has(th:empty:only-child) {
+  display: none;
+}
+
+.table-specs.block table tbody tr:empty,
+.table-specs.block table tbody tr:has(td:empty:only-child) {
+  display: none;
+}
+
+/* bordered variant */
+.table-specs.block.bordered table th,
+.table-specs.block.bordered table td {
+  border: 1px solid rgb(255 255 255 / 30%);
+  padding: 14px 12px;
+}
+/* stylelint-enable no-descending-specificity */

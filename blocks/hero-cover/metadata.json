@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-cover",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-06-05T14:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://iem-brochures.ie.edu/.executive.mba/",
+    "originPage": "Executive MBA brochure cover page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "brochure-cover",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + subtitle + background video/image",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brochure cover pages",
+      "program landing pages with cinematic video backgrounds",
+      "dark-themed hero sections with large typography"
+    ],
+    "notSuitableFor": [
+      "light-themed pages",
+      "hero sections with CTA buttons",
+      "pages without background media"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/executive-mba/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-05T14:06:00.000Z"
+  }
+}

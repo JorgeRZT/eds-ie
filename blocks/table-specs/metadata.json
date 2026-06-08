@@ -1,0 +1,39 @@
+{
+  "variantName": "table-specs",
+  "baseBlock": "table",
+  "version": "1.0.0",
+  "created": "2026-06-05T14:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://iem-brochures.ie.edu/.executive.mba/",
+    "originPage": "Executive MBA brochure program details",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "program-specs",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "key-value pairs (6 rows, 2 columns, no header)",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "program specification tables",
+      "key-value data displays on dark backgrounds",
+      "course details (duration, format, language, location)"
+    ],
+    "notSuitableFor": [
+      "complex data tables with headers",
+      "tables with many columns",
+      "light-themed data displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/executive-mba/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-05T14:06:00.000Z"
+  }
+}

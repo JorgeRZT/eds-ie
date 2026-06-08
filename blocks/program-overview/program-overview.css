@@ -1,0 +1,131 @@
+.program-overview {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 24px;
+  font-family: var(--body-font-family);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.program-overview-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.section:has(.program-overview) {
+  margin: 0 !important;
+}
+
+/* Header: large title */
+.program-overview .program-overview-header {
+  margin-bottom: 40px;
+  padding: 0 24px;
+}
+
+.program-overview .program-overview-header h2,
+.program-overview .program-overview-header h1 {
+  font-size: 56px;
+  font-weight: 300;
+  font-family: var(--heading-font-family);
+  line-height: 1.05;
+  color: #fff;
+  margin: 0;
+}
+
+/* Content: image left + specs right */
+.program-overview .program-overview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 24px;
+}
+
+/* Image column */
+.program-overview .program-overview-image {
+  position: relative;
+}
+
+.program-overview .program-overview-image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Specs column */
+.program-overview .program-overview-specs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.program-overview .program-overview-specs p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  margin: 0;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.program-overview .program-overview-specs p:first-child {
+  border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+.program-overview .program-overview-specs strong {
+  color: #5ce1e6;
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-right: 24px;
+}
+
+@media (width >= 900px) {
+  .program-overview {
+    padding: 80px 48px;
+  }
+
+  .program-overview .program-overview-header h2,
+  .program-overview .program-overview-header h1 {
+    font-size: 96px;
+  }
+
+  .program-overview .program-overview-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .program-overview .program-overview-image {
+    flex: 0 0 45%;
+  }
+
+  .program-overview .program-overview-image img {
+    max-width: 100%;
+  }
+
+  .program-overview .program-overview-specs {
+    flex: 1;
+  }
+
+  .program-overview .program-overview-specs p {
+    font-size: 22px;
+    padding: 22px 0;
+  }
+}
+
+@media (width >= 1200px) {
+  .program-overview .program-overview-header h2,
+  .program-overview .program-overview-header h1 {
+    font-size: 120px;
+  }
+
+  .program-overview .program-overview-specs p {
+    font-size: 28px;
+    padding: 26px 0;
+  }
+}

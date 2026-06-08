@@ -1,0 +1,4 @@
+/* section-metadata block has no visual output — it is removed after processing */
+.section-metadata-wrapper {
+  display: none;
+}

@@ -1,0 +1,18 @@
+:root {
+  --heading-font-family: "Montserrat", sans-serif;
+  --body-font-family: "Montserrat", sans-serif;
+  --background-color: #f3f3f3;
+  --text-color: #006;
+  --link-color: #006;
+  --link-hover-color: #006;
+  --light-color: #f3f3f3;
+  --dark-color: #006;
+  --section-padding: 40px 0;
+  --nav-height: 64px;
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+}

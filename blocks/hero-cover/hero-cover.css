@@ -1,0 +1,119 @@
+/* hero-cover block: full-width dramatic cover section
+   Extracted values: h1 ~125px/500wt, subtitle ~40px/300wt uppercase, white text on dark bg */
+
+.hero-cover-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.section.dark:has(.hero-cover) {
+  background-color: transparent;
+  padding: 0;
+}
+
+.hero-cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  min-height: calc(100vh - var(--nav-height));
+  padding: 60px 24px;
+  overflow: hidden;
+  background-color: var(--dark-color);
+}
+
+/* All text white - section provides dark bg via .dark class */
+.hero-cover h1,
+.hero-cover h2,
+.hero-cover h3,
+.hero-cover h4,
+.hero-cover h5,
+.hero-cover h6 {
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cover h1 {
+  font-size: 48px;
+  order: 2;
+}
+
+.hero-cover p {
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  margin: 0;
+  order: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background image overlay (when picture is present) */
+.hero-cover picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.hero-cover img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background video */
+.hero-cover video {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove empty rows from DOM layout */
+.hero-cover > div {
+  display: contents;
+}
+
+.hero-cover > div > div {
+  display: contents;
+}
+
+@media (width >= 900px) {
+  .hero-cover {
+    min-height: 80vh;
+    padding: 80px 48px;
+  }
+
+  .hero-cover h1 {
+    font-size: 96px;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-cover p {
+    font-size: 22px;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-cover h1 {
+    font-size: 125px;
+  }
+
+  .hero-cover p {
+    font-size: 24px;
+  }
+}
