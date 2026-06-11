@@ -1,0 +1,63 @@
+/* Block: ranking - rotating school-ranking number + optional photo.
+   In a paired section the blue panel is on the section; standalone it sets its own. */
+
+.ranking {
+  background-color: #bfe4f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 48px 24px;
+  box-sizing: border-box;
+}
+
+.ranking .ranking-media,
+.ranking p {
+  margin: 0;
+}
+
+.ranking img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+
+.ranking .ranking-photo img {
+  max-width: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  /* Section owns the panel + height; show the huge ranking number top,
+     student photo bottom-aligned to the left like the original.
+     Heights are capped so the whole section fits within one viewport. */
+  .ranking {
+    background-color: transparent;
+    height: 100%;
+    max-height: 100vh;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 6vh 48px;
+    gap: 0;
+  }
+
+  .ranking .ranking-photo {
+    align-self: flex-start;
+  }
+
+  .ranking .ranking-photo img {
+    max-width: 320px;
+    max-height: 30vh;
+    width: auto;
+    border-radius: 24px;
+  }
+
+  .ranking .ranking-media:first-child img {
+    max-width: 100%;
+    max-height: 38vh;
+    width: auto;
+  }
+}

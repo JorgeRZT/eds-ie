@@ -1,0 +1,159 @@
+/* Block: profile-stats - portrait with overlaid stat bubbles */
+
+.profile-stats {
+  background-color: #bfe4f7;
+  color: #0a0a0a;
+  font-family: var(--body-font-family);
+  padding: 48px 24px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-stats-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.section:has(.profile-stats) {
+  margin: 0 !important;
+}
+
+/* In the paired section the blue panel + height live on the section. */
+@media (width >= 900px) {
+  .section.profile-stats-container.logo-marquee-container .profile-stats {
+    background-color: transparent;
+    min-height: auto;
+    height: 100%;
+    padding: 80px 48px;
+  }
+}
+
+.profile-stats .profile-stats-title {
+  font-family: var(--heading-font-family);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 24px;
+  max-width: 8ch;
+}
+
+.profile-stats .profile-stats-figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-stats .profile-stats-figure img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.profile-stats .profile-stats-bubble {
+  position: absolute;
+  border-radius: 24px;
+  padding: 14px 20px;
+  max-width: 150px;
+  line-height: 1.15;
+}
+
+.profile-stats .profile-stats-bubble .profile-stats-number {
+  display: block;
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.profile-stats .profile-stats-bubble .profile-stats-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* alternating bubble colours: dark / light */
+.profile-stats .profile-stats-bubble:nth-of-type(odd) {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.profile-stats .profile-stats-bubble:nth-of-type(odd) .profile-stats-number {
+  color: #6fc4ec;
+}
+
+.profile-stats .profile-stats-bubble:nth-of-type(even) {
+  background-color: #9ed6f2;
+  color: #0a0a0a;
+}
+
+/* positions */
+.profile-stats .profile-stats-bubble:nth-of-type(1) {
+  top: 6%;
+  right: 0;
+}
+
+.profile-stats .profile-stats-bubble:nth-of-type(2) {
+  bottom: 22%;
+  left: 0;
+}
+
+.profile-stats .profile-stats-bubble:nth-of-type(3) {
+  bottom: 0;
+  right: 8%;
+}
+
+@media (width >= 900px) {
+  .profile-stats {
+    padding: 80px 48px;
+  }
+
+  .profile-stats .profile-stats-title {
+    font-size: 88px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .profile-stats .profile-stats-figure {
+    justify-content: flex-start;
+    margin-top: -40px;
+  }
+
+  .profile-stats .profile-stats-figure img {
+    max-width: 420px;
+  }
+
+  .profile-stats .profile-stats-bubble {
+    max-width: 170px;
+    padding: 18px 24px;
+  }
+
+  .profile-stats .profile-stats-bubble .profile-stats-number {
+    font-size: 52px;
+  }
+
+  .profile-stats .profile-stats-bubble .profile-stats-label {
+    font-size: 15px;
+  }
+
+  .profile-stats .profile-stats-bubble:nth-of-type(1) {
+    top: 8%;
+    left: 46%;
+    right: auto;
+  }
+
+  .profile-stats .profile-stats-bubble:nth-of-type(2) {
+    bottom: 24%;
+    left: -24px;
+  }
+
+  .profile-stats .profile-stats-bubble:nth-of-type(3) {
+    bottom: 4%;
+    left: 34%;
+    right: auto;
+  }
+}

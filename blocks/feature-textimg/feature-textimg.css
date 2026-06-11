@@ -1,0 +1,128 @@
+/* Block: feature-textimg - text paragraph alongside a feature image */
+
+.feature-textimg {
+  color: #1a1a1a;
+  font-family: var(--body-font-family);
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-textimg > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature-textimg .feature-textimg-text-col h2 {
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 16px;
+  color: #0a0a0a;
+}
+
+.feature-textimg .feature-textimg-text-col p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.feature-textimg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@media (width >= 900px) {
+  .feature-textimg {
+    padding: 60px 0;
+  }
+
+  .feature-textimg > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .feature-textimg .feature-textimg-text-col {
+    flex: 0 0 45%;
+  }
+
+  .feature-textimg .feature-textimg-img-col {
+    flex: 1;
+  }
+
+  .feature-textimg .feature-textimg-text-col h2 {
+    font-size: 64px;
+  }
+
+  .feature-textimg .feature-textimg-text-col p {
+    font-size: 24px;
+    line-height: 1.55;
+  }
+
+  .feature-textimg img {
+    border-radius: 24px;
+  }
+}
+
+@media (width >= 1200px) {
+  .feature-textimg .feature-textimg-text-col p {
+    font-size: 28px;
+    line-height: 1.5;
+  }
+}
+
+/* When paired with the accordion, this block fills the left half of the
+   screen: stack title+text over the image and add comfortable padding. */
+@media (width >= 900px) {
+  .section.feature-textimg-container.accordion-container .feature-textimg {
+    padding: 5vh 48px;
+    height: 100%;
+    max-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+
+  .section.feature-textimg-container.accordion-container .feature-textimg > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3vh;
+  }
+
+  .section.feature-textimg-container.accordion-container .feature-textimg .feature-textimg-text-col {
+    flex: initial;
+  }
+
+  .section.feature-textimg-container.accordion-container .feature-textimg .feature-textimg-text-col h2 {
+    font-size: clamp(36px, 5vh, 56px);
+    margin-bottom: 2vh;
+  }
+
+  .section.feature-textimg-container.accordion-container .feature-textimg .feature-textimg-text-col p {
+    font-size: clamp(16px, 2.2vh, 22px);
+    line-height: 1.45;
+  }
+
+  .section.feature-textimg-container.accordion-container .feature-textimg img {
+    max-height: 42vh;
+    object-fit: cover;
+  }
+
+  .section.feature-textimg-container.accordion-container .accordion {
+    padding: 5vh 48px;
+    height: 100%;
+    max-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

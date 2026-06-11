@@ -299,3 +299,38 @@ main .section.dark h6 {
 main .section.dark a:any-link {
   color: #fff;
 }
+
+/* Executive MBA brochure: paired blocks share one full-bleed screen.
+   Each paired section holds two block wrappers that should sit side by side
+   on desktop (stacked on mobile). The shared background lives on the section. */
+main > .section.highlight-text-container.ranking-container,
+main > .section.feature-textimg-container.accordion-container,
+main > .section.profile-stats-container.logo-marquee-container {
+  margin: 0;
+}
+
+main > .section.highlight-text-container.ranking-container,
+main > .section.profile-stats-container.logo-marquee-container {
+  background-color: #bfe4f7;
+}
+
+@media (width >= 900px) {
+  main > .section.highlight-text-container.ranking-container > div,
+  main > .section.feature-textimg-container.accordion-container > div,
+  main > .section.profile-stats-container.logo-marquee-container > div {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main > .section.highlight-text-container.ranking-container,
+  main > .section.feature-textimg-container.accordion-container,
+  main > .section.profile-stats-container.logo-marquee-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+}

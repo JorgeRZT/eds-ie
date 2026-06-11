@@ -43,13 +43,17 @@
 /* Image column */
 .program-overview .program-overview-image {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .program-overview .program-overview-image img {
   width: 100%;
   max-width: 420px;
+  aspect-ratio: 3 / 4;
   height: auto;
-  border-radius: 12px;
+  object-fit: cover;
+  border-radius: 24px;
   display: block;
 }
 
@@ -69,7 +73,7 @@
   margin: 0;
   border-bottom: 1px solid rgb(255 255 255 / 20%);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.4;
 }
 
@@ -79,7 +83,7 @@
 
 .program-overview .program-overview-specs strong {
   color: #5ce1e6;
-  font-weight: 500;
+  font-weight: 400;
   flex-shrink: 0;
   margin-right: 24px;
 }
@@ -105,7 +109,7 @@
   }
 
   .program-overview .program-overview-image img {
-    max-width: 100%;
+    max-width: 360px;
   }
 
   .program-overview .program-overview-specs {
@@ -114,6 +118,7 @@
 
   .program-overview .program-overview-specs p {
     font-size: 22px;
+    font-weight: 300;
     padding: 22px 0;
   }
 }

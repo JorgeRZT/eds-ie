@@ -1,0 +1,78 @@
+/* Block: highlight-text - large highlighted statement (panel background set on section) */
+
+.highlight-text {
+  background-color: #bfe4f7;
+  color: #0a0a0a;
+  font-family: var(--heading-font-family);
+  padding: 64px 24px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight-text-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.highlight-text p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.25;
+  max-width: 18ch;
+}
+
+/* decorative chevrons */
+.highlight-text .highlight-text-chevrons {
+  margin-top: 48px;
+  display: flex;
+  gap: 0;
+}
+
+.highlight-text .highlight-text-chevrons span {
+  width: 48px;
+  height: 96px;
+  background:
+    linear-gradient(135deg, transparent 48%, #fff 48%, #fff 60%, transparent 60%),
+    linear-gradient(45deg, transparent 48%, #fff 48%, #fff 60%, transparent 60%);
+  background-size: 100% 50%;
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+}
+
+@media (width >= 900px) {
+  /* In a paired section the section owns the blue panel + full height. */
+  .highlight-text {
+    min-height: auto;
+    max-height: 100vh;
+    padding: 5vh 48px;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .highlight-text p {
+    font-size: clamp(20px, 2.4vh, 30px);
+    line-height: 1.3;
+    max-width: 22ch;
+  }
+
+  .highlight-text .highlight-text-chevrons {
+    margin-top: 4vh;
+  }
+
+  .highlight-text .highlight-text-chevrons span {
+    width: 56px;
+    height: 11vh;
+    max-height: 110px;
+  }
+}
+
+@media (width >= 1200px) {
+  .highlight-text p {
+    font-size: clamp(24px, 2.6vh, 34px);
+  }
+}
